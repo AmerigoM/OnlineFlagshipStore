@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09BBC60BAEC7D79D0C97C6B6 /* Pods_Online_Flagship_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1D1A85A2C8DB3303414B52 /* Pods_Online_Flagship_Store.framework */; };
+		16D4565B25C19B9600C350EC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D4565A25C19B9600C350EC /* Product.swift */; };
 		16E1115E25C17A8B00E2134B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E1115D25C17A8B00E2134B /* AppDelegate.swift */; };
 		16E1116025C17A8B00E2134B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E1115F25C17A8B00E2134B /* SceneDelegate.swift */; };
 		16E1116225C17A8B00E2134B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E1116125C17A8B00E2134B /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16D4565A25C19B9600C350EC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		16E1115A25C17A8B00E2134B /* Online Flagship Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Online Flagship Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16E1115D25C17A8B00E2134B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16E1115F25C17A8B00E2134B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		16E1117225C17B4300E2134B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				16D4565A25C19B9600C350EC /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16E1116225C17A8B00E2134B /* ViewController.swift in Sources */,
+				16D4565B25C19B9600C350EC /* Product.swift in Sources */,
 				16E1115E25C17A8B00E2134B /* AppDelegate.swift in Sources */,
 				16E1116025C17A8B00E2134B /* SceneDelegate.swift in Sources */,
 			);
