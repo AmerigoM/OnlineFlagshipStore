@@ -59,6 +59,7 @@ class ViewController: UIViewController {
     // MARK: - Networking
     
     func getProductList(url: String) {
+        self.productList = []
         Alamofire.request(url, method: .get).responseJSON {
             response in
             if response.result.isSuccess {
@@ -69,14 +70,24 @@ class ViewController: UIViewController {
                 for item in jsonArray {
                     let product = Product()
                     product.title = item["ModelNames"].stringValue
+                    product.macroCategory = item["MacroCategory"].stringValue
                     product.category = item["MicroCategory"].stringValue
                     product.price = item["FullPrice"].stringValue
+                    product.code = item["Code8"].stringValue
                     product.thumbnailUrl = self.calculateThumbnailUrl(item["DefaultCode10"].stringValue)
                     self.productList.append(product)
                 }
+                self.performSegue(withIdentifier: "segueToList", sender: self)
             } else {
                 self.displayAlert(title: "Request failure", message: "Please contact the app support.")
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToList" {
+            let destinationVC = segue.destination as! ProductListViewControllerTableViewController
+            destinationVC.productList = self.productList
         }
     }
     

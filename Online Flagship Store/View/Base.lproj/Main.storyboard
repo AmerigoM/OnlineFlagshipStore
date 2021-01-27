@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9jx-eM-RMr">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Flagship Store-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Online_Flagship_Store" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,20 +17,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KXS-Ub-I2u">
-                                <rect key="frame" x="10" y="54" width="370" height="746"/>
+                                <rect key="frame" x="10" y="98" width="370" height="702"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nsr-SA-OVd">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="370.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="348.66666666666669"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgz-yQ-JqW">
-                                                <rect key="frame" x="0.0" y="0.0" width="184" height="370.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="348.66666666666669"/>
                                                 <state key="normal" image="ReadyToWear"/>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tz9-Bk-t3E"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTp-AU-Oad" userLabel="Accessories">
-                                                <rect key="frame" x="194" y="0.0" width="176" height="370.66666666666669"/>
+                                                <rect key="frame" x="194" y="0.0" width="176" height="348.66666666666669"/>
                                                 <state key="normal" image="Accessories"/>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Scv-md-p5T"/>
@@ -39,17 +39,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="29n-N1-IhA">
-                                        <rect key="frame" x="0.0" y="375.66666666666674" width="370" height="370.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="353.66666666666674" width="370" height="348.33333333333326"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e0-qk-n0c" userLabel="Lingerie">
-                                                <rect key="frame" x="0.0" y="0.0" width="184" height="370.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="348.33333333333331"/>
                                                 <state key="normal" image="Lingerie"/>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfs-wT-Ed7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiF-0f-kXF" userLabel="Beauty">
-                                                <rect key="frame" x="194" y="0.0" width="176" height="370.33333333333331"/>
+                                                <rect key="frame" x="194" y="0.0" width="176" height="348.33333333333331"/>
                                                 <state key="normal" image="Beauty"/>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wf7-Ge-hum"/>
@@ -69,16 +69,93 @@
                             <constraint firstItem="KXS-Ub-I2u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="mTf-rw-2yE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Flagship Store" id="U3f-k6-b7U"/>
                     <connections>
                         <outlet property="accessories" destination="PTp-AU-Oad" id="Arr-fS-8ag"/>
                         <outlet property="beauty" destination="DiF-0f-kXF" id="gIf-PX-AQv"/>
                         <outlet property="lingerie" destination="4e0-qk-n0c" id="vha-sf-bcw"/>
                         <outlet property="readyToWear" destination="Hgz-yQ-JqW" id="go8-V8-rJM"/>
+                        <segue destination="lBn-Bt-RhM" kind="show" identifier="segueToList" id="T5q-8D-lor"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="61.956521739130437"/>
+            <point key="canvasLocation" x="904.61538461538453" y="61.848341232227483"/>
+        </scene>
+        <!--Product List-->
+        <scene sceneID="Iw7-kj-B5o">
+            <objects>
+                <tableViewController id="lBn-Bt-RhM" customClass="ProductListViewControllerTableViewController" customModule="Online_Flagship_Store" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="E4F-ky-Lti">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="126" id="SDM-Fw-wRU" customClass="ProductCell" customModule="Online_Flagship_Store" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="390" height="126"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SDM-Fw-wRU" id="5Qu-qs-qpj">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="126"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVM-g2-NOf" userLabel="Thumbnail">
+                                            <rect key="frame" x="20" y="11" width="108" height="104"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="103" id="KM3-Ch-lyE"/>
+                                                <constraint firstAttribute="width" constant="108" id="dZ5-h0-Nsf"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8v7-ZV-HTp" userLabel="Product">
+                                            <rect key="frame" x="136" y="11" width="214" height="104"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8v7-ZV-HTp" firstAttribute="leading" secondItem="bVM-g2-NOf" secondAttribute="trailing" constant="8" id="C3F-GG-SN3"/>
+                                        <constraint firstItem="8v7-ZV-HTp" firstAttribute="top" secondItem="5Qu-qs-qpj" secondAttribute="topMargin" id="XL3-z5-N0k"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8v7-ZV-HTp" secondAttribute="trailing" constant="20" id="arX-Pc-sbc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="8v7-ZV-HTp" secondAttribute="bottom" id="gTt-pf-BWL"/>
+                                        <constraint firstItem="bVM-g2-NOf" firstAttribute="leading" secondItem="5Qu-qs-qpj" secondAttribute="leadingMargin" id="ilz-yl-voQ"/>
+                                        <constraint firstItem="bVM-g2-NOf" firstAttribute="top" secondItem="5Qu-qs-qpj" secondAttribute="topMargin" id="qdL-iG-Jsn"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bVM-g2-NOf" secondAttribute="bottom" id="wla-Lz-qs6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="prodDescription" destination="8v7-ZV-HTp" id="N1u-jz-Rjp"/>
+                                    <outlet property="prodThumbnail" destination="bVM-g2-NOf" id="jPh-VT-S8v"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lBn-Bt-RhM" id="ki8-x2-Khi"/>
+                            <outlet property="delegate" destination="lBn-Bt-RhM" id="paX-Sn-bd1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Product List" id="NL2-Fo-6l8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zP5-dE-A4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2026.1538461538462" y="61.848341232227483"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Y52-no-lCX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9jx-eM-RMr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V4z-eT-5Bz">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dQ5-TQ-4tS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dJx-Iq-qZH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24.615384615384613" y="61.848341232227483"/>
         </scene>
     </scenes>
     <resources>
