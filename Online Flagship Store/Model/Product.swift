@@ -14,4 +14,7 @@ class Product {
     var price: String = ""
     var thumbnailUrl: String = ""
     var code: String = ""
+    var composition = ""
+    var details = ""
+    var madeIn = ""
 }

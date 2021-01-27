@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ProductCell: UITableViewCell {
     @IBOutlet weak var prodThumbnail: UIImageView!
@@ -49,15 +51,40 @@ class ProductListViewControllerTableViewController: UITableViewController {
         return cell
     }
 
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let url = "http://api.yoox.biz/Item.API/1.0/SMC_IT/item/" + self.productList[indexPath.row].code + ".json"
+        Alamofire.request(url, method: .get).responseJSON {
+            response in
+            if response.result.isSuccess {
+                let resultJSON: JSON = JSON(response.result.value!)
+                
+                let descriptionJSON = resultJSON["Item"]["Descriptions"]
+                let descriptionArray = descriptionJSON.array!
+                
+                for item in descriptionArray {
+                    if item["Key"] == "Composition" {
+                        self.productList[indexPath.row].composition = item["Value"].stringValue
+                    } else {
+                        if item["Key"] == "Details" {
+                            self.productList[indexPath.row].details = item["Value"].stringValue
+                        }
+                    }
+                }
+                
+                self.productList[indexPath.row].madeIn = descriptionJSON["Item"]["MadeIn"].stringValue
+                
+                
+            }
+        }
+    }
 
 }
 
