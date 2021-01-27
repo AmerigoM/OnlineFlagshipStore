@@ -22,36 +22,42 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nsr-SA-OVd">
                                         <rect key="frame" x="0.0" y="0.0" width="370" height="370.66666666666669"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReadyToWear" translatesAutoresizingMaskIntoConstraints="NO" id="BGI-28-Qid" userLabel="ReadyToWear">
-                                                <rect key="frame" x="0.0" y="0.0" width="180" height="370.66666666666669"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Accessories" translatesAutoresizingMaskIntoConstraints="NO" id="aCP-4e-tIn" userLabel="Accessories">
-                                                <rect key="frame" x="190" y="0.0" width="180" height="370.66666666666669"/>
-                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgz-yQ-JqW">
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="370.66666666666669"/>
+                                                <state key="normal" image="ReadyToWear"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tz9-Bk-t3E"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTp-AU-Oad" userLabel="Accessories">
+                                                <rect key="frame" x="194" y="0.0" width="176" height="370.66666666666669"/>
+                                                <state key="normal" image="Accessories"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Scv-md-p5T"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="aCP-4e-tIn" firstAttribute="height" secondItem="BGI-28-Qid" secondAttribute="height" id="VlL-da-MB2"/>
-                                            <constraint firstItem="aCP-4e-tIn" firstAttribute="width" secondItem="BGI-28-Qid" secondAttribute="width" id="g8h-xg-weT"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="29n-N1-IhA">
                                         <rect key="frame" x="0.0" y="375.66666666666674" width="370" height="370.33333333333326"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lingerie" translatesAutoresizingMaskIntoConstraints="NO" id="ikq-py-owq" userLabel="Beauty">
-                                                <rect key="frame" x="0.0" y="0.0" width="180" height="370.33333333333331"/>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beauty" translatesAutoresizingMaskIntoConstraints="NO" id="JwJ-k0-C2E" userLabel="Lingerie">
-                                                <rect key="frame" x="190" y="0.0" width="180" height="370.33333333333331"/>
-                                            </imageView>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e0-qk-n0c" userLabel="Lingerie">
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="370.33333333333331"/>
+                                                <state key="normal" image="Lingerie"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfs-wT-Ed7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiF-0f-kXF" userLabel="Beauty">
+                                                <rect key="frame" x="194" y="0.0" width="176" height="370.33333333333331"/>
+                                                <state key="normal" image="Beauty"/>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wf7-Ge-hum"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="ikq-py-owq" firstAttribute="height" secondItem="BGI-28-Qid" secondAttribute="height" id="7Af-95-RdT"/>
-                                    <constraint firstItem="JwJ-k0-C2E" firstAttribute="width" secondItem="BGI-28-Qid" secondAttribute="width" id="EMI-Hx-1zl"/>
-                                    <constraint firstItem="ikq-py-owq" firstAttribute="width" secondItem="BGI-28-Qid" secondAttribute="width" id="FyG-dA-sq3"/>
-                                    <constraint firstItem="JwJ-k0-C2E" firstAttribute="height" secondItem="BGI-28-Qid" secondAttribute="height" id="hDG-LB-zvU"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -63,6 +69,12 @@
                             <constraint firstItem="KXS-Ub-I2u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="mTf-rw-2yE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accessories" destination="PTp-AU-Oad" id="Arr-fS-8ag"/>
+                        <outlet property="beauty" destination="DiF-0f-kXF" id="gIf-PX-AQv"/>
+                        <outlet property="lingerie" destination="4e0-qk-n0c" id="vha-sf-bcw"/>
+                        <outlet property="readyToWear" destination="Hgz-yQ-JqW" id="go8-V8-rJM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
