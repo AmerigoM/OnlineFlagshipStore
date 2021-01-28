@@ -17,16 +17,13 @@ class ProductCell: UITableViewCell {
 class ProductListViewControllerTableViewController: UITableViewController {
     
     var productList = [Product]()
+    var chosenIndex = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         overrideUserInterfaceStyle = .light
         self.tableView.separatorStyle = .none
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
     }
 
     // MARK: - Table view data source
@@ -41,6 +38,7 @@ class ProductListViewControllerTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        self.overrideUserInterfaceStyle = .unspecified
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductCell
 
         // configure the cell
@@ -54,7 +52,10 @@ class ProductListViewControllerTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "segueToDetails" {
+            let destinationVC = segue.destination as! ProductDetailsViewController
+            destinationVC.productDetail = self.productList[chosenIndex]
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -79,13 +80,17 @@ class ProductListViewControllerTableViewController: UITableViewController {
                     }
                 }
                 
-                self.productList[indexPath.row].madeIn = descriptionJSON["Item"]["MadeIn"].stringValue
+                self.productList[indexPath.row].madeIn = resultJSON["Item"]["MadeIn"].stringValue
                 
+                print("MADE IN")
+                print(resultJSON["Item"]["MadeIn"].stringValue)
                 
+                self.chosenIndex = indexPath.row
+                
+                self.performSegue(withIdentifier: "segueToDetails", sender: self)
             }
         }
     }
-
 }
 
 // MARK: - Extensions
