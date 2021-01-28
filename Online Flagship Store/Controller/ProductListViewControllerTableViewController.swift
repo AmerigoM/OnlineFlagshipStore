@@ -64,6 +64,14 @@ class ProductListViewControllerTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let url = "http://api.yoox.biz/Item.API/1.0/SMC_IT/item/" + self.productList[indexPath.row].code + ".json"
+        
+        // show spinner
+        let spinner = SpinnerViewController()
+        addChild(spinner)
+        spinner.view.frame = view.frame
+        view.addSubview(spinner.view)
+        spinner.didMove(toParent: self)
+        
         Alamofire.request(url, method: .get).responseJSON {
             response in
             if response.result.isSuccess {
@@ -87,7 +95,17 @@ class ProductListViewControllerTableViewController: UITableViewController {
                 self.chosenIndex = indexPath.row
                 
                 self.performSegue(withIdentifier: "segueToDetails", sender: self)
+            } else {
+                let dialogMessage = UIAlertController(title: "Request Failure", message: "Please check your internet connection or contact the app support.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default)
+                dialogMessage.addAction(ok)
+                self.present(dialogMessage, animated: true, completion: nil)
             }
+            
+            // dismiss spinner
+            spinner.willMove(toParent: nil)
+            spinner.view.removeFromSuperview()
+            spinner.removeFromParent()
         }
     }
 }

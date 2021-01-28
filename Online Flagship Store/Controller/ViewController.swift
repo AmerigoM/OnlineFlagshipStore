@@ -87,7 +87,7 @@ class ViewController: UIViewController {
                 }
                 self.performSegue(withIdentifier: "segueToList", sender: self)
             } else {
-                self.displayAlert(title: "Request failure", message: "Please contact the app support.")
+                self.displayAlert(title: "Request failure", message: "Please check you internet connection or contact the app support.")
             }
             
             // dismiss spinner

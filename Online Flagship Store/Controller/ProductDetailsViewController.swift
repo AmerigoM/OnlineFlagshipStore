@@ -19,6 +19,7 @@ class ProductDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.titleLabel.text = productDetail.title
         self.priceLabel.text = productDetail.price + " €"
         self.madeInLabel.text = productDetail.madeIn

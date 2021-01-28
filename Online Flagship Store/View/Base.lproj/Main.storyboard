@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="904.61538461538453" y="61.848341232227483"/>
         </scene>
-        <!--Product List-->
+        <!--Lista Prodotti-->
         <scene sceneID="Iw7-kj-B5o">
             <objects>
                 <tableViewController id="lBn-Bt-RhM" customClass="ProductListViewControllerTableViewController" customModule="Online_Flagship_Store" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,7 +133,7 @@
                             <outlet property="delegate" destination="lBn-Bt-RhM" id="paX-Sn-bd1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Product List" id="NL2-Fo-6l8"/>
+                    <navigationItem key="navigationItem" title="Lista Prodotti" id="NL2-Fo-6l8"/>
                     <connections>
                         <segue destination="apY-gn-cpe" kind="show" identifier="segueToDetails" id="Eyz-PN-Atd"/>
                     </connections>
@@ -142,7 +142,7 @@
             </objects>
             <point key="canvasLocation" x="1948" y="62"/>
         </scene>
-        <!--Product Details-->
+        <!--Dettagli Prodotto-->
         <scene sceneID="23a-pv-h9L">
             <objects>
                 <viewController id="apY-gn-cpe" customClass="ProductDetailsViewController" customModule="Online_Flagship_Store" customModuleProvider="target" sceneMemberID="viewController">
@@ -257,7 +257,7 @@
                             <constraint firstItem="NFP-x1-JQM" firstAttribute="top" secondItem="1o8-Ai-Xks" secondAttribute="bottom" id="ptv-D0-AoR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Product Details" id="WcA-mD-9Jx"/>
+                    <navigationItem key="navigationItem" title="Dettagli Prodotto" id="WcA-mD-9Jx"/>
                     <connections>
                         <outlet property="categoryLabel" destination="ZWC-sY-soK" id="zCD-BA-0Jn"/>
                         <outlet property="descriptionTextField" destination="DPW-yG-xLc" id="NXP-OC-IeI"/>
