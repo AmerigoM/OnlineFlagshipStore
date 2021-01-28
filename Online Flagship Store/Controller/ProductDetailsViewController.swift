@@ -14,6 +14,7 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var imageLabel: UIImageView!
     @IBOutlet weak var descriptionTextField: UITextView!
     @IBOutlet weak var madeInLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     var productDetail = Product()
 
     override func viewDidLoad() {
@@ -26,6 +27,8 @@ class ProductDetailsViewController: UIViewController {
         self.descriptionTextField.text = customDescription
         self.descriptionTextField.isEditable = false
         self.descriptionTextField.isSelectable = false
+        
+        self.categoryLabel.text = productDetail.macroCategory + " - " + productDetail.category
         
         self.imageLabel.imageFromServerURL(urlString: productDetail.thumbnailUrl, placeholderImage: UIImage(named: "Loading")!)
     }
