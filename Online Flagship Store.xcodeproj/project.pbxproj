@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09BBC60BAEC7D79D0C97C6B6 /* Pods_Online_Flagship_Store.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1D1A85A2C8DB3303414B52 /* Pods_Online_Flagship_Store.framework */; };
+		16740FEF25C2A410004FF9CA /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16740FEE25C2A410004FF9CA /* SpinnerViewController.swift */; };
 		16D4565B25C19B9600C350EC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D4565A25C19B9600C350EC /* Product.swift */; };
 		16D4565E25C1A7C100C350EC /* ProductListViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D4565D25C1A7C100C350EC /* ProductListViewControllerTableViewController.swift */; };
 		16D4566A25C1EE2600C350EC /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D4566925C1EE2600C350EC /* ProductDetailsViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16740FEE25C2A410004FF9CA /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		16D4565A25C19B9600C350EC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		16D4565D25C1A7C100C350EC /* ProductListViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		16D4566925C1EE2600C350EC /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				16E1116125C17A8B00E2134B /* ViewController.swift */,
 				16D4565D25C1A7C100C350EC /* ProductListViewControllerTableViewController.swift */,
 				16D4566925C1EE2600C350EC /* ProductDetailsViewController.swift */,
+				16740FEE25C2A410004FF9CA /* SpinnerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				16D4565B25C19B9600C350EC /* Product.swift in Sources */,
 				16D4566A25C1EE2600C350EC /* ProductDetailsViewController.swift in Sources */,
 				16E1115E25C17A8B00E2134B /* AppDelegate.swift in Sources */,
+				16740FEF25C2A410004FF9CA /* SpinnerViewController.swift in Sources */,
 				16E1116025C17A8B00E2134B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

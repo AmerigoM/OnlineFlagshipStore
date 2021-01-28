@@ -26,6 +26,7 @@ class ProductDetailsViewController: UIViewController {
         self.descriptionTextField.text = customDescription
         self.descriptionTextField.isEditable = false
         self.descriptionTextField.isSelectable = false
+        
         self.imageLabel.imageFromServerURL(urlString: productDetail.thumbnailUrl, placeholderImage: UIImage(named: "Loading")!)
     }
 

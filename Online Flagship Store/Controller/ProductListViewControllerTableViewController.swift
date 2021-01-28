@@ -38,7 +38,9 @@ class ProductListViewControllerTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // enable dark mode when active
         self.overrideUserInterfaceStyle = .unspecified
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as! ProductCell
 
         // configure the cell
@@ -81,9 +83,6 @@ class ProductListViewControllerTableViewController: UITableViewController {
                 }
                 
                 self.productList[indexPath.row].madeIn = resultJSON["Item"]["MadeIn"].stringValue
-                
-                print("MADE IN")
-                print(resultJSON["Item"]["MadeIn"].stringValue)
                 
                 self.chosenIndex = indexPath.row
                 

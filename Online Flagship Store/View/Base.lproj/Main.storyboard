@@ -16,21 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KXS-Ub-I2u">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KXS-Ub-I2u">
                                 <rect key="frame" x="10" y="98" width="370" height="702"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nsr-SA-OVd">
-                                        <rect key="frame" x="0.0" y="0.0" width="370" height="348.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="346"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgz-yQ-JqW">
-                                                <rect key="frame" x="0.0" y="0.0" width="184" height="348.66666666666669"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="346"/>
                                                 <state key="normal" image="ReadyToWear"/>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tz9-Bk-t3E"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTp-AU-Oad" userLabel="Accessories">
-                                                <rect key="frame" x="194" y="0.0" width="176" height="348.66666666666669"/>
+                                                <rect key="frame" x="194" y="0.0" width="176" height="346"/>
                                                 <state key="normal" image="Accessories"/>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Scv-md-p5T"/>
@@ -39,17 +39,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="29n-N1-IhA">
-                                        <rect key="frame" x="0.0" y="353.66666666666674" width="370" height="348.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="356" width="370" height="346"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4e0-qk-n0c" userLabel="Lingerie">
-                                                <rect key="frame" x="0.0" y="0.0" width="184" height="348.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="346"/>
                                                 <state key="normal" image="Lingerie"/>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfs-wT-Ed7"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiF-0f-kXF" userLabel="Beauty">
-                                                <rect key="frame" x="194" y="0.0" width="176" height="348.33333333333331"/>
+                                                <rect key="frame" x="194" y="0.0" width="176" height="346"/>
                                                 <state key="normal" image="Beauty"/>
                                                 <connections>
                                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wf7-Ge-hum"/>
@@ -142,7 +142,7 @@
             </objects>
             <point key="canvasLocation" x="1948" y="62"/>
         </scene>
-        <!--Product Details View Controller-->
+        <!--Product Details-->
         <scene sceneID="23a-pv-h9L">
             <objects>
                 <viewController id="apY-gn-cpe" customClass="ProductDetailsViewController" customModule="Online_Flagship_Store" customModuleProvider="target" sceneMemberID="viewController">
@@ -229,7 +229,7 @@
                             <constraint firstItem="NFP-x1-JQM" firstAttribute="top" secondItem="1o8-Ai-Xks" secondAttribute="bottom" id="ptv-D0-AoR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="WcA-mD-9Jx"/>
+                    <navigationItem key="navigationItem" title="Product Details" id="WcA-mD-9Jx"/>
                     <connections>
                         <outlet property="descriptionTextField" destination="DPW-yG-xLc" id="NXP-OC-IeI"/>
                         <outlet property="imageLabel" destination="G8g-3U-jQH" id="7yo-yj-H5V"/>

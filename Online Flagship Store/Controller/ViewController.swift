@@ -19,22 +19,22 @@ class ViewController: UIViewController {
     private var productList = [Product]()
     
     // constants
-    let READY_TO_WEAR_URL = "http://api.yoox.biz/Search.API/1.3/SMC_IT/search/results.json?ave=prod&productsPerPage=50&gender=D&page=1&department=Main_Ready_To_Wear&format=lite&sortRule=Ranking"
-    let ACCESSORIES_URL = "http://api.yoox.biz/Search.API/1.3/SMC_IT/search/results.json?ave=prod&productsPerPage=50&gender=D&page=1&department=Main_Accessories_All&format=lite&sortRule=Ranking"
-    let LINGERIE_URL = "http://api.yoox.biz/Search.API/1.3/SMC_IT/search/results.json?ave=prod&productsPerPage=50&page=1&department=Main_Lingerie&format=lite&sortRule=Ranking"
-    let BEAUTY_URL = "http://api.yoox.biz/Search.API/1.3/SMC_IT/search/results.json?ave=prod&productsPerPage=50&gender=D&page=1&department=Main_Beauty&format=lite&sortRule=Ranking"
+    private let READY_TO_WEAR_URL = "http://api.yoox.biz/Search.API/1.3/SMC_IT/search/results.json?ave=prod&productsPerPage=50&gender=D&page=1&department=Main_Ready_To_Wear&format=lite&sortRule=Ranking"
+    private let ACCESSORIES_URL = "http://api.yoox.biz/Search.API/1.3/SMC_IT/search/results.json?ave=prod&productsPerPage=50&gender=D&page=1&department=Main_Accessories_All&format=lite&sortRule=Ranking"
+    private let LINGERIE_URL = "http://api.yoox.biz/Search.API/1.3/SMC_IT/search/results.json?ave=prod&productsPerPage=50&page=1&department=Main_Lingerie&format=lite&sortRule=Ranking"
+    private let BEAUTY_URL = "http://api.yoox.biz/Search.API/1.3/SMC_IT/search/results.json?ave=prod&productsPerPage=50&gender=D&page=1&department=Main_Beauty&format=lite&sortRule=Ranking"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         readyToWear.imageView?.contentMode = .scaleAspectFill
-        readyToWear.imageView?.layer.cornerRadius = 5
+        readyToWear.imageView?.layer.cornerRadius = 10
         accessories.imageView?.contentMode = .scaleAspectFill
-        accessories.imageView?.layer.cornerRadius = 5
+        accessories.imageView?.layer.cornerRadius = 10
         lingerie.imageView?.contentMode = .scaleAspectFill
-        lingerie.imageView?.layer.cornerRadius = 5
+        lingerie.imageView?.layer.cornerRadius = 10
         beauty.imageView?.contentMode = .scaleAspectFill
-        beauty.imageView?.layer.cornerRadius = 5
+        beauty.imageView?.layer.cornerRadius = 10
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -60,6 +60,14 @@ class ViewController: UIViewController {
     
     func getProductList(url: String) {
         self.productList = []
+        
+        // show spinner
+        let spinner = SpinnerViewController()
+        addChild(spinner)
+        spinner.view.frame = view.frame
+        view.addSubview(spinner.view)
+        spinner.didMove(toParent: self)
+        
         Alamofire.request(url, method: .get).responseJSON {
             response in
             if response.result.isSuccess {
@@ -81,6 +89,11 @@ class ViewController: UIViewController {
             } else {
                 self.displayAlert(title: "Request failure", message: "Please contact the app support.")
             }
+            
+            // dismiss spinner
+            spinner.willMove(toParent: nil)
+            spinner.view.removeFromSuperview()
+            spinner.removeFromParent()
         }
     }
     
